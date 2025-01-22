@@ -1,5 +1,7 @@
 .home {
-  background-color: var(--main-background);
+  background-image: var(--main-background-image);
+  background-size: cover;
+  background-position: center center;
   min-height: 100vh;
 }
 .home img {

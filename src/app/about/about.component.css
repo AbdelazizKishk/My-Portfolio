@@ -1,5 +1,7 @@
 .about {
-  background-color: var(--main-background);
+  background-image: var(--main-background-image);
+  background-size: cover;
+  background-position: center center;
   color: #fff;
   min-height: 100vh;
 }
@@ -16,33 +18,28 @@
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5.8px);
   padding: 10px;
-}
-/* .inner {
-  border-radius: 12px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5.8px);
-  padding: 2px;
   position: relative;
+  overflow: hidden;
+}
+.inner {
+  position: relative;
+  padding: 3px;
+  z-index: 1;
+  overflow: hidden;
 }
 .inner::after {
   content: "";
+  position: absolute;
   background: linear-gradient(
     90deg,
     hsla(197, 100%, 64%, 1) 0%,
     hsla(339, 100%, 55%, 1) 100%
   );
-  height: 120%;
-  width: 120%;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  position: absolute;
-  animation: rotate 8s linear infinite;
+  inset: 0;
   z-index: -1;
-  padding: 3px;
   border-radius: 12px;
+  animation: rotate 8s linear infinite;
 }
-
 @keyframes rotate {
   from {
     transform: rotate(0);
@@ -52,11 +49,6 @@
     transform: rotate(360deg);
   }
 }
-
-.inner {
-  overflow: hidden;
-} */
-
 .box img {
   width: 50px;
   border-radius: 50%;

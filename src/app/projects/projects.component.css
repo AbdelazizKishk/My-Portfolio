@@ -1,5 +1,7 @@
 .projects {
-  background-color: var(--main-background);
+  background-image: var(--main-background-image);
+  background-size: cover;
+  background-position: center center;
   padding: 100px 0;
   min-height: 100vh;
 }

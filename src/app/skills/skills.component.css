@@ -1,5 +1,7 @@
 .skill {
-  background-color: var(--main-background);
+  background-image: var(--main-background-image);
+  background-size: cover;
+  background-position: center center;
   color: #fff;
   min-height: 100vh;
 }
