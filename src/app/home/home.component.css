@@ -1,0 +1,25 @@
+.home {
+  background-color: var(--main-background);
+  min-height: 100vh;
+}
+.home img {
+  border-radius: 50%;
+  width: 25%;
+}
+.home-text h1 {
+  color: #b31312;
+}
+.home button {
+  background-color: var(--main-color);
+  color: #fff;
+  border: none;
+}
+@media (max-width: 768px) {
+  .home img {
+    width: 50%;
+  }
+  .home {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
