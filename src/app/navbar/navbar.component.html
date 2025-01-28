@@ -14,11 +14,16 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div
+      #navbarNav
+      class="collapse navbar-collapse"
+      id="navbarSupportedContent"
+    >
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a
             class="nav-link"
+            (click)="closeNavbar()"
             routerLink="/home"
             routerLinkActive="btn-color rounded-2"
             >Home</a
@@ -27,6 +32,7 @@
         <li class="nav-item">
           <a
             class="nav-link"
+            (click)="closeNavbar()"
             routerLink="/about"
             routerLinkActive="btn-color rounded-2"
             >About</a
@@ -35,6 +41,7 @@
         <li class="nav-item">
           <a
             class="nav-link"
+            (click)="closeNavbar()"
             routerLink="/skills"
             routerLinkActive="btn-color rounded-2"
             >Skills</a
@@ -43,6 +50,7 @@
         <li class="nav-item">
           <a
             class="nav-link"
+            (click)="closeNavbar()"
             routerLink="/projects"
             routerLinkActive="btn-color rounded-2"
             >Projects</a
@@ -51,6 +59,7 @@
         <li class="nav-item">
           <a
             class="nav-link"
+            (click)="closeNavbar()"
             routerLink="/contact"
             routerLinkActive="btn-color rounded-2"
             >Contact</a

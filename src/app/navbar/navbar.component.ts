@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
@@ -7,4 +7,13 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
 })
-export class NavbarComponent {}
+export class NavbarComponent {
+  @ViewChild('navbarNav', { static: false }) navbarNav!: ElementRef;
+
+  closeNavbar() {
+    const navbarElement = this.navbarNav.nativeElement;
+    if (navbarElement.classList.contains('show')) {
+      navbarElement.classList.remove('show');
+    }
+  }
+}
