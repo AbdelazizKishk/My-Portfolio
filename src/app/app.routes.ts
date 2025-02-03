@@ -1,17 +1,41 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { SkillsComponent } from './skills/skills.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { ContactComponent } from './contact/contact.component';
-import { NotfoundComponent } from './notfound/notfound.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent, title: 'Home' },
-  { path: 'about', component: AboutComponent, title: 'About' },
-  { path: 'skills', component: SkillsComponent, title: 'Skills' },
-  { path: 'projects', component: ProjectsComponent, title: 'Projects' },
-  { path: 'contact', component: ContactComponent, title: 'Contact' },
-  { path: '**', component: NotfoundComponent, title: 'Error' },
+  {
+    path: 'home',
+    loadComponent: () =>
+      import('./home/home.component').then((m) => m.HomeComponent),
+    title: 'Home',
+  },
+  {
+    path: 'about',
+    loadComponent: () =>
+      import('./about/about.component').then((m) => m.AboutComponent),
+    title: 'About',
+  },
+  {
+    path: 'skills',
+    loadComponent: () =>
+      import('./skills/skills.component').then((m) => m.SkillsComponent),
+    title: 'Skills',
+  },
+  {
+    path: 'projects',
+    loadComponent: () =>
+      import('./projects/projects.component').then((m) => m.ProjectsComponent),
+    title: 'Projects',
+  },
+  {
+    path: 'contact',
+    loadComponent: () =>
+      import('./contact/contact.component').then((m) => m.ContactComponent),
+    title: 'Contact',
+  },
+  {
+    path: '**',
+    loadComponent: () =>
+      import('./notfound/notfound.component').then((m) => m.NotfoundComponent),
+    title: 'Error',
+  },
 ];
