@@ -3,6 +3,6 @@
   --main-color: #b31312;
   --main-background-image: url(/bg/endless-constellation.svg);
 }
-* {
-  font-family: "Inter", serif;
+body {
+  font-family: "Work Sans", serif;
 }
